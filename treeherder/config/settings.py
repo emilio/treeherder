@@ -477,3 +477,5 @@ NOTIFY_ACCESS_TOKEN = env('NOTIFY_ACCESS_TOKEN', default=None)
 # This is only used for removing the rate limiting. You can create your own here:
 # https://github.com/settings/tokens
 GITHUB_TOKEN = env("GITHUB_TOKEN", default=None)
+
+MOZCI_CONFIG_PATH = env("MOZCI_CONFIG_PATH", default="config.toml")

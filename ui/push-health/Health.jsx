@@ -166,7 +166,7 @@ export default class Health extends React.PureComponent {
     } = this.state;
     const { tests, commitHistory, linting, builds } = metrics;
     const needInvestigationCount = tests
-      ? tests.details.needInvestigation.length
+      ? tests.details.needInvestigation.tests.length
       : 0;
 
     const { notify } = this.props;

@@ -7,12 +7,12 @@ import pushHealth from '../mock/push_health';
 const repoName = 'try';
 const { jobs, metrics } = pushHealth;
 
-const failJob = jobs[metrics.tests.details.needInvestigation[0].jobName].find(
-  (job) => job.result === 'testfailed',
-);
+const failJob = jobs[
+  metrics.tests.details.needInvestigation.tests[0].jobName
+].find((job) => job.result === 'testfailed');
 
 const failBuild = metrics.builds.details[0];
-const passJob = jobs[metrics.tests.details.knownIssues[0].jobName].find(
+const passJob = jobs[metrics.tests.details.knownIssues.tests[0].jobName].find(
   (job) => job.result === 'success',
 );
 

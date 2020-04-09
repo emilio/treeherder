@@ -200,19 +200,18 @@ class PlatformConfig extends React.PureComponent {
 
 PlatformConfig.propTypes = {
   failure: PropTypes.shape({
-    testName: PropTypes.string.isRequired,
+    testName: PropTypes.string,
     jobName: PropTypes.string.isRequired,
     jobSymbol: PropTypes.string.isRequired,
-    confidence: PropTypes.number.isRequired,
     platform: PropTypes.string.isRequired,
     config: PropTypes.string.isRequired,
-    suggestedClassification: PropTypes.string.isRequired,
     key: PropTypes.string.isRequired,
   }).isRequired,
   currentRepo: PropTypes.shape({}).isRequired,
   notify: PropTypes.func.isRequired,
   groupedBy: PropTypes.string.isRequired,
   updateParamsAndState: PropTypes.func.isRequired,
+  jobs: PropTypes.shape({}).isRequired,
 };
 
 export default PlatformConfig;

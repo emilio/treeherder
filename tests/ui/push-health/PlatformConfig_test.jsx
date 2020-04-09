@@ -14,7 +14,7 @@ import bugSuggestions from '../mock/bug_suggestions.json';
 
 const repoName = 'autoland';
 const { jobs } = pushHealth;
-const testFailure = pushHealth.metrics.tests.details.needInvestigation[2];
+const testFailure = pushHealth.metrics.tests.details.needInvestigation.tests[2];
 
 beforeEach(() => {
   fetchMock.get('https://treestatus.mozilla-releng.net/trees/autoland', {

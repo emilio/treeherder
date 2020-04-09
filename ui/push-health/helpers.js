@@ -14,3 +14,11 @@ export const filterTests = (tests, searchStr) => {
     ),
   );
 };
+
+export const filterUnstructuredFailures = (unstructuredFailures, searchStr) => {
+  const filters = searchStr.split(' ').map((filter) => new RegExp(filter, 'i'));
+
+  return unstructuredFailures.filter((test) =>
+    filters.every((f) => f.test(`${test.platform} ${test.config}`)),
+  );
+};
